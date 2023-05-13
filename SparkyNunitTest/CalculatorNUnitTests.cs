@@ -37,6 +37,7 @@ namespace Sparky
             Assert.IsFalse(isOdd);
         }
 
+        //Testing multiple values
         [Test]
         [TestCase(11)]
         [TestCase(13)]
@@ -50,6 +51,7 @@ namespace Sparky
             Assert.IsTrue(isOdd);
         }
 
+        //Combine Unit Test with Expected Result
         [Test]
         [TestCase(11, ExpectedResult = true)]
         [TestCase(10, ExpectedResult = false)]
