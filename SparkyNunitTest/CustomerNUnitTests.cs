@@ -23,9 +23,16 @@ namespace Sparky
             Assert.That(fullName, Does.EndWith("Ten"));
             Assert.That(fullName, Does.Match("Hello, [A-Z]{1}"));
 
+        }
 
+        [Test]
+        public void GreetMessage_NotGreeted_ReturnNull()
+        {
+            var customer = new Customer();
 
+            customer.GreetAndCombineName("Ben", "Ten");
 
+            Assert.IsNull(customer.GreetMessage);
         }
 
 
