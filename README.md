@@ -14,6 +14,19 @@ The project is designed to help developers of all levels improve their unit test
 - Easy-to-follow code samples with clear comments and explanations.
 - Suitable for developers of all levels, from beginners to experts. Continuously updated with new test cases and frameworks.
 
+## AAA in unit testing:
+AAA in unit testing stands for "Arrange, Act, Assert". It is a common pattern used to structure unit tests in a clear and organized way, making them easier to understand and maintain. Each letter in the AAA pattern represents a phase of the unit test:
+
+# Arrange: In this phase, you set up the necessary preconditions for the unit test. This may involve creating objects, setting up input data, or configuring the environment in which the test will run.
+
+# Act: In this phase, you execute the code that you want to test. This may involve calling methods, invoking functions, or simulating user interactions.
+
+# Assert: In this phase, you check the result of the code that you executed in the "Act" phase to see if it meets your expectations. This may involve comparing the actual result to an expected result, verifying that an exception was thrown, or checking the state of objects or variables.
+
+
+
+
+
 
 # String Assertions with NUnit
 
