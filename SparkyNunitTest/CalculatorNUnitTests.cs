@@ -75,7 +75,14 @@ namespace Sparky
 
         }
 
-
+        [Test]
+        public void OddRanger_InMaxAndMin_ReturnValidOddRanger()
+        {
+            Calculator calcu = new Calculator();
+            List<int> expectedOddRange = new() { 5,7,9};
+            List<int> result = calcu.OddRange(5, 10);
+            Assert.That(result, Is.EquivalentTo(expectedOddRange));
+        }
 
     }
 }

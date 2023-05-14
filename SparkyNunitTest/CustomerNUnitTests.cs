@@ -21,14 +21,17 @@ namespace Sparky
         public void CombineName_InputFirstAndLastName_FullName() {
 
             customer.GreetAndCombineName("Ben", "Ten");
+            Assert.Multiple(() =>
+            {
+                Assert.That(customer.GreetMessage, Is.EqualTo("Hello, Ben Ten"));
+                Assert.AreEqual(customer.GreetMessage, "Hello, Ben Ten");
+                Assert.That(customer.GreetMessage, Does.Contain("ten").IgnoreCase); //Only Checks, output has ten
+                Assert.That(customer.GreetMessage, Does.StartWith("Hello"));
+                Assert.That(customer.GreetMessage, Does.EndWith("Ten"));
+                Assert.That(customer.GreetMessage, Does.Match("Hello, [A-Z]{1}"));
 
-            Assert.That(customer.GreetMessage, Is.EqualTo("Hello, Ben Ten"));
-            Assert.AreEqual(customer.GreetMessage, "Hello, Ben Ten");
-            Assert.That(customer.GreetMessage, Does.Contain("ten").IgnoreCase); //Only Checks, output has ten
-            Assert.That(customer.GreetMessage, Does.StartWith("Hello"));
-            Assert.That(customer.GreetMessage, Does.EndWith("Ten"));
-            Assert.That(customer.GreetMessage, Does.Match("Hello, [A-Z]{1}"));
-
+            });
+           
         }
 
         [Test]
