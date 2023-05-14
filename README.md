@@ -22,7 +22,6 @@ The project is designed to help developers of all levels improve their unit test
 - Assert.StartsWith: Assert.StartsWith("hello", "hello world");
 - Assert.EndsWith: Assert.EndsWith("world", "hello world");
 - Assert.IsMatch: Assert.IsMatch("[0-9]+", "12345");
-- 
 These are just a few of the string assertion methods available in NUnit. There are many more that can be used to test various aspects of strings in unit tests.
 
 
