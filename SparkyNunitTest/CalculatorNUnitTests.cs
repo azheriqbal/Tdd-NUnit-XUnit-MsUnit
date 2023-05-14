@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +61,26 @@ namespace Sparky
             Calculator calcu = new Calculator();
             return calcu.IsOddNumber(a);
         }
+
+        [Test]
+        [TestCase(5.4,10.5)] 
+        [TestCase(5.43,10.53)]
+        [TestCase(5.49,10.59)]
+
+        public void AddNumbers_InputTwodouble_GetCorrectAddition(double a, double b)
+        {
+            //Arrange
+            Calculator calcu = new Calculator();
+
+            //Act
+            double resutl = calcu.AddNumsdouble(a, b);
+
+            //Assert
+            Assert.AreEqual(15.9, resutl,1);
+
+        }
+
+
 
     }
 }
