@@ -11,6 +11,7 @@ namespace Sparky
     public class BankAccountNUnitTests
     {
         private BankAccount bankaccount;
+
         [SetUp]
         public void SetUp()
         {
